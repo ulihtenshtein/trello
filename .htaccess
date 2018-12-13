@@ -1,0 +1,24 @@
+php_value short_open_tag 1
+
+php_flag register_globals Off
+php_flag allow_url_fopen On
+
+php_flag magic_quotes_gpc 0
+php_flag magic_quotes_runtime 0
+php_flag magic_quotes_sybase 0
+
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$
+RewriteRule ^(.*)$ http://%1/$1 [L,R=301]
+
+Options +FollowSymlinks
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?%{QUERY_STRING}
+
+#dnwr_ip 10.1.0.24
+
+php_value upload_max_filesize 100M
+php_value post_max_size 100M
+php_value max_upload_size 100M

@@ -1,0 +1,42 @@
+.vert-centered 
+{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.vcenter
+{
+	display:flex;
+	align-items:center;
+}
+.nowrap 
+{
+    white-space: nowrap;
+}
+
+.cleaner 
+{
+    clear: both;
+    overflow: hidden;
+    height: 0px;
+}
+
+.overflow-hidden 
+{
+    overflow: hidden;
+}
+
+.display-none 
+{
+    display: none;
+}
+
+.vcenter-text
+{
+	vertical-align:middl;
+}
+
+.btn-back
+{
+	margin-top:20px;
+}
